@@ -1,0 +1,129 @@
+{
+  "updated": "2026-07-09T10:40:30.504355+00:00",
+  "author_name": "Hamish Dow",
+  "affiliation": "Lecturer, Department of Civil and Environmental Engineering, University of Strathclyde",
+  "citedby": 90,
+  "h_index": 4,
+  "publications": [
+    {
+      "title": "Directional lighting-based deep learning models for crack and spalling classification",
+      "authors": "Sanjeetha PENNADA and Jack McAlorum and Marcus Perry and Hamish Dow and Gordon Dobie",
+      "venue": "Journal of Imaging",
+      "year": 2025,
+      "citations": 2,
+      "url": "https://www.mdpi.com/2313-433X/11/9/288"
+    },
+    {
+      "title": "Comparison of directional and diffused lighting for pixel-level segmentation of concrete cracks",
+      "authors": "Hamish Dow and Marcus Perry and Jack McAlorum and Sanjeetha Pennada",
+      "venue": "Infrastructures",
+      "year": 2025,
+      "citations": 1,
+      "url": "https://www.mdpi.com/2412-3811/10/6/129"
+    },
+    {
+      "title": "Automated concrete exposed reinforcement and corrosion detection and measurement using coloured illumination",
+      "authors": "Hamish Dow and Andrew Darby and Marcus Perry and Feng Zhang",
+      "venue": "MATEC Web of Conferences",
+      "year": 2025,
+      "citations": 1,
+      "url": "https://www.matec-conferences.org/articles/matecconf/abs/2025/03/matecconf_cs2025_03006/matecconf_cs2025_03006.html"
+    },
+    {
+      "title": "Robotic Deployment of Embedded Strain Sensors in Precast Tunnel Segments",
+      "authors": "Tresor Tshimbombo and Marcus Perry and Hamish Dow and Jack McAlorum and Chris Hoy and Chrysoula Litina",
+      "venue": "IEEE Sensors Journal",
+      "year": 2025,
+      "citations": 0,
+      "url": "https://ieeexplore.ieee.org/abstract/document/10965913/"
+    },
+    {
+      "title": "Illumination-enhanced concrete defect assessment",
+      "authors": "Hamish Dow",
+      "venue": "",
+      "year": 2025,
+      "citations": 0,
+      "url": "https://stax.strath.ac.uk/concern/theses/qn59q460p"
+    },
+    {
+      "title": "3D Reconstruction and Measurement of Concrete Spalling Using Near-Field Photometric Stereo and YOLOv8",
+      "authors": "Hamish Dow and Marcus Perry and Sanjeetha PENNADA and Rebecca Lunn and Stella Pytharouli",
+      "venue": "Automation in Construction",
+      "year": 2024,
+      "citations": 18,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0926580524003698"
+    },
+    {
+      "title": "Photometric stereo data for the validation of a structural health monitoring test rig",
+      "authors": "Jennifer Blair and Bruce Stephen and Blair Brown and Stephen McArthur and David Gorman and Alistair Forbes and Claire Pottier and Jack McAlorum and Hamish Dow and Marcus Perry",
+      "venue": "Data in Brief",
+      "year": 2024,
+      "citations": 3,
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352340924001355"
+    },
+    {
+      "title": "Concrete crack pixel-level segmentation: a comparison of scene illumination angle of incidence",
+      "authors": "Hamish Dow and Marcus Perry and Jack McAlorum and Sanjeetha Pennada",
+      "venue": "11th European Workshop on Structural Health Monitoring (EWSHM 2024), 2024",
+      "year": 2024,
+      "citations": 0,
+      "url": "https://strathprints.strath.ac.uk/90066/"
+    },
+    {
+      "title": "Skeleton-based noise removal algorithm for binary concrete crack image segmentation",
+      "authors": "Hamish Dow and Marcus Perry and Jack McAlorum and Sanjeetha Pennada and Gordon Dobie",
+      "venue": "Automation in Construction",
+      "year": 2023,
+      "citations": 29,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0926580523001279"
+    },
+    {
+      "title": "Threshold-based BRISQUE-assisted deep learning for enhancing crack detection in concrete structures",
+      "authors": "Sanjeetha Pennada and Marcus Perry and Jack McAlorum and Hamish Dow and Gordon Dobie",
+      "venue": "Journal of Imaging",
+      "year": 2023,
+      "citations": 19,
+      "url": "https://www.mdpi.com/2313-433X/9/10/218"
+    },
+    {
+      "title": "Automated Concrete Crack Inspection with Directional Lighting Platform",
+      "authors": "Jack McAlorum and Hamish Dow and Sanjeetha Pennada and Marcus Perry and Gordon Dobie",
+      "venue": "IEEE Sensors Letters",
+      "year": 2023,
+      "citations": 9,
+      "url": "https://ieeexplore.ieee.org/abstract/document/10295569/"
+    },
+    {
+      "title": "Robotic concrete inspection with illumination-enhancement",
+      "authors": "Jack McAlorum and Marcus Perry and Hamish Dow and Sanjeetha Pennada",
+      "venue": "Sensors and Smart Structures Technologies for Civil, Mechanical, and \u2026, 2023",
+      "year": 2023,
+      "citations": 3,
+      "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12486/124860L/Robotic-concrete-inspection-with-illumination-enhancement/10.1117/12.2655938.short"
+    },
+    {
+      "title": "A novel directional lighting algorithm for concrete crack pixel-level segmentation",
+      "authors": "Hamish Dow and Marcus Perry and Jack McAlorum and Sanjeetha Pennada and Gordon Dobie",
+      "venue": "Sensors and Smart Structures Technologies for Civil, Mechanical, and \u2026, 2023",
+      "year": 2023,
+      "citations": 2,
+      "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12486/124861L/A-novel-directional-lighting-algorithm-for-concrete-crack-pixel-level/10.1117/12.2657235.short"
+    },
+    {
+      "title": "Performance evaluation of an improved deep CNN-based concrete crack detection algorithm",
+      "authors": "Sanjeetha Pennada and Marcus Perry and Jack McAlorum and Hamish Dow and Gordon Dobie",
+      "venue": "Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series",
+      "year": 2023,
+      "citations": 2,
+      "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12486/1248615/Performance-evaluation-of-an-improved-deep-CNN-based-concrete-crack/10.1117/12.2657723.short"
+    },
+    {
+      "title": "Automated manufacturing of smart tunnel segment",
+      "authors": "Tresor Tshimbombo and Marcus Perry and Hamish Dow and Jack McAlorum and Chris Hoy and Chrysoula Litina",
+      "venue": "Sensors and Smart Structures Technologies for Civil, Mechanical, and \u2026, 2023",
+      "year": 2023,
+      "citations": 1,
+      "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12486/124861C/Automated-manufacturing-of-smart-tunnel-segment/10.1117/12.2657113.short"
+    }
+  ]
+}
