@@ -1,0 +1,68 @@
+name: Update publications and deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Every Monday at 06:00 UTC. Adjust as you like.
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-publications:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch publications from Google Scholar
+        id: fetch
+        continue-on-error: true
+        run: python scripts/fetch_publications.py
+
+      - name: Warn if fetch failed
+        if: steps.fetch.outcome == 'failure'
+        run: echo "::warning::Fetching publications from Google Scholar failed (likely rate-limited). Keeping previous data/publications.json."
+
+      - name: Commit updated publications
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/publications.json
+          git diff --cached --quiet || git commit -m "Auto-update publications from Google Scholar"
+          git push
+
+  deploy:
+    needs: update-publications
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
