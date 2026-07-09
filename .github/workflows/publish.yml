@@ -43,12 +43,21 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/publications.json
-          git diff --cached --quiet || git commit -m "Auto-update publications from Google Scholar"
-          git push
+          if [ -f data/publications.json ]; then
+            git add data/publications.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Auto-update publications from Google Scholar"
+              git push
+            else
+              echo "No changes to data/publications.json."
+            fi
+          else
+            echo "data/publications.json does not exist yet (fetch likely failed); nothing to commit."
+          fi
 
   deploy:
     needs: update-publications
+    if: always() && needs.update-publications.result != 'cancelled'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
