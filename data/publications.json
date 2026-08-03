@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-09T10:40:30.504355+00:00",
+  "updated": "2026-08-03T09:31:15.029205+00:00",
   "author_name": "Hamish Dow",
   "affiliation": "Lecturer, Department of Civil and Environmental Engineering, University of Strathclyde",
-  "citedby": 90,
+  "citedby": 97,
   "h_index": 4,
   "publications": [
     {
@@ -10,7 +10,7 @@
       "authors": "Sanjeetha PENNADA and Jack McAlorum and Marcus Perry and Hamish Dow and Gordon Dobie",
       "venue": "Journal of Imaging",
       "year": 2025,
-      "citations": 2,
+      "citations": 3,
       "url": "https://www.mdpi.com/2313-433X/11/9/288"
     },
     {
@@ -18,7 +18,7 @@
       "authors": "Hamish Dow and Marcus Perry and Jack McAlorum and Sanjeetha Pennada",
       "venue": "Infrastructures",
       "year": 2025,
-      "citations": 1,
+      "citations": 2,
       "url": "https://www.mdpi.com/2412-3811/10/6/129"
     },
     {
@@ -27,7 +27,7 @@
       "venue": "MATEC Web of Conferences",
       "year": 2025,
       "citations": 1,
-      "url": "https://www.matec-conferences.org/articles/matecconf/abs/2025/03/matecconf_cs2025_03006/matecconf_cs2025_03006.html"
+      "url": "https://pureportal.strath.ac.uk/en/publications/automated-concrete-exposed-reinforcement-and-corrosion-detection-/"
     },
     {
       "title": "Robotic Deployment of Embedded Strain Sensors in Precast Tunnel Segments",
@@ -43,14 +43,14 @@
       "venue": "",
       "year": 2025,
       "citations": 0,
-      "url": "https://stax.strath.ac.uk/concern/theses/qn59q460p"
+      "url": "http://stax.strath.ac.uk/downloads/6395w761p"
     },
     {
       "title": "3D Reconstruction and Measurement of Concrete Spalling Using Near-Field Photometric Stereo and YOLOv8",
       "authors": "Hamish Dow and Marcus Perry and Sanjeetha PENNADA and Rebecca Lunn and Stella Pytharouli",
       "venue": "Automation in Construction",
       "year": 2024,
-      "citations": 18,
+      "citations": 20,
       "url": "https://www.sciencedirect.com/science/article/pii/S0926580524003698"
     },
     {
@@ -58,7 +58,7 @@
       "authors": "Jennifer Blair and Bruce Stephen and Blair Brown and Stephen McArthur and David Gorman and Alistair Forbes and Claire Pottier and Jack McAlorum and Hamish Dow and Marcus Perry",
       "venue": "Data in Brief",
       "year": 2024,
-      "citations": 3,
+      "citations": 2,
       "url": "https://www.sciencedirect.com/science/article/pii/S2352340924001355"
     },
     {
@@ -74,7 +74,7 @@
       "authors": "Hamish Dow and Marcus Perry and Jack McAlorum and Sanjeetha Pennada and Gordon Dobie",
       "venue": "Automation in Construction",
       "year": 2023,
-      "citations": 29,
+      "citations": 31,
       "url": "https://www.sciencedirect.com/science/article/pii/S0926580523001279"
     },
     {
@@ -82,7 +82,7 @@
       "authors": "Sanjeetha Pennada and Marcus Perry and Jack McAlorum and Hamish Dow and Gordon Dobie",
       "venue": "Journal of Imaging",
       "year": 2023,
-      "citations": 19,
+      "citations": 20,
       "url": "https://www.mdpi.com/2313-433X/9/10/218"
     },
     {
@@ -90,7 +90,7 @@
       "authors": "Jack McAlorum and Hamish Dow and Sanjeetha Pennada and Marcus Perry and Gordon Dobie",
       "venue": "IEEE Sensors Letters",
       "year": 2023,
-      "citations": 9,
+      "citations": 10,
       "url": "https://ieeexplore.ieee.org/abstract/document/10295569/"
     },
     {
