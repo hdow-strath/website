@@ -6,4 +6,12 @@
     "photo": "",
     "url": "https://scholar.google.com/citations?user=i2_8yp0AAAAJ&hl=en"
   }
+
+  {
+    "name": "Test",
+    "role": "Test",
+    "bio": "Short bio goes here. Edit data/team.json to add real team members.",
+    "photo": "",
+  }
+
 ]
