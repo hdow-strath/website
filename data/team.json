@@ -7,4 +7,36 @@
     "url": "https://scholar.google.com/citations?user=i2_8yp0AAAAJ&hl=en",
     "status": "current"
   }
+
+
+    {
+    "name": "Matthew Smith",
+    "role": "Research Assistant",
+    "bio": "Test test test.",
+    "photo": "",
+    "url": "",
+    "status": "current"
+  }
+
+
+    {
+    "name": "Callum Dalrymple",
+    "role": "Research Intern",
+    "bio": "Test test test.",
+    "photo": "",
+    "url": "",
+    "status": "current"
+  }
+
+
+    {
+    "name": "Henry Seekamp",
+    "role": "Research Intern",
+    "bio": "Test test test.",
+    "photo": "",
+    "url": "",
+    "status": "past"
+  }
+
+
 ]
