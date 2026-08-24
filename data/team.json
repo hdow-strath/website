@@ -4,14 +4,7 @@
     "role": "Principal Investigator",
     "bio": "Short bio goes here. Edit data/team.json to add real team members.",
     "photo": "",
-    "url": "https://scholar.google.com/citations?user=i2_8yp0AAAAJ&hl=en"
+    "url": "https://scholar.google.com/citations?user=i2_8yp0AAAAJ&hl=en",
+    "status": "current"
   }
-
-  {
-    "name": "Test",
-    "role": "Test",
-    "bio": "Short bio goes here. Edit data/team.json to add real team members.",
-    "photo": "",
-  }
-
 ]

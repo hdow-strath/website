@@ -20,9 +20,17 @@
   </header>
 
   <main>
-    <div id="team-grid" class="team-grid">
-      <p class="status-msg">Loading team...</p>
-    </div>
+    <p id="team-status-msg" class="status-msg">Loading team...</p>
+
+    <section id="team-section-current" class="team-section" hidden>
+      <h2>Current Members</h2>
+      <div id="team-grid-current" class="team-grid"></div>
+    </section>
+
+    <section id="team-section-past" class="team-section" hidden>
+      <h2>Past Members</h2>
+      <div id="team-grid-past" class="team-grid"></div>
+    </section>
   </main>
 
   <footer class="site-footer">
