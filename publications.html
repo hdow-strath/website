@@ -9,15 +9,27 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <h1 data-config="group_name">Research Group</h1>
-      <p class="tagline" data-config="tagline">Tagline goes here</p>
+      <a class="site-name" href="index.html" data-config="group_name">Research Group</a>
       <nav class="site-nav">
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="team.html">Team</a>
         <a href="publications.html">Publications</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Gallery</a>
       </nav>
     </div>
   </header>
+
+  <!-- Header image: replace images/headers/publications.jpg -->
+  <section class="banner" style="background-image: url('images/headers/publications.jpg')">
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <p class="banner-label" data-config="group_name">Research Group</p>
+      <h1>Publications</h1>
+      <div class="banner-divider"></div>
+    </div>
+  </section>
 
   <main>
     <div id="pubs-meta" class="pubs-meta"></div>

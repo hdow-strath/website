@@ -20,7 +20,8 @@ async function loadConfig() {
 }
 
 function highlightActiveNav() {
-  const current = location.pathname.split("/").pop() || "index.html";
+  let current = location.pathname.split("/").pop() || "index.html";
+  if (current === "post.html") current = "blog.html"; // a single blog post counts as the Blog page
   document.querySelectorAll("nav.site-nav a").forEach((a) => {
     if (a.getAttribute("href") === current) {
       a.classList.add("active");

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery &middot; Research Group</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-name" href="index.html" data-config="group_name">Research Group</a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="publications.html">Publications</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Header image: replace images/headers/gallery.jpg -->
+  <section class="banner" style="background-image: url('images/headers/gallery.jpg')">
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <p class="banner-label" data-config="group_name">Research Group</p>
+      <h1>Gallery</h1>
+      <div class="banner-divider"></div>
+    </div>
+  </section>
+
+  <main class="main-wide">
+    <div id="gallery-grid" class="gallery-grid">
+      <p class="status-msg">Loading photos...</p>
+    </div>
+  </main>
+
+  <!-- Full-size photo viewer -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-prev" aria-label="Previous photo">&#8249;</button>
+    <figure>
+      <img id="lb-img" alt="">
+      <figcaption id="lb-caption"></figcaption>
+    </figure>
+    <button class="lb-next" aria-label="Next photo">&#8250;</button>
+  </div>
+
+  <footer class="site-footer">
+    <p>Contact: <a data-config="contact_email" data-config-href="contact_mailto" href="#">email</a>
+      &middot; <a data-config-href="scholar_url" href="#" target="_blank" rel="noopener">Google Scholar</a>
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

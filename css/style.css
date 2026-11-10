@@ -1,21 +1,34 @@
+/* Body font: Source Sans 3 (very legible, loaded from Google Fonts) */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
 :root {
+  /* Titles use Helvetica; body text uses Source Sans 3 */
+  --font-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  /* Brand: Pantone 307 (#0078ae) and tints/shades built around it */
+  --brand: #0078ae;        /* Pantone 307 */
+  --brand-bright: #2a9fd6; /* lighter 307, for use on dark backgrounds */
+  --brand-pale: #9dd3ee;   /* very light 307, small text on dark */
+  --brand-navy: #0b2231;   /* deep 307 shade, nav bar */
+  --brand-ink: #0d2a3a;    /* banner fallback / overlay tone */
+
   --bg: #ffffff;
-  --fg: #1a1a1a;
-  --muted: #5f6368;
-  --accent: #8b2635;
-  --border: #e5e5e5;
-  --card-bg: #fafafa;
+  --fg: #16222b;
+  --muted: #586874;
+  --accent: var(--brand);
+  --border: #dde6ec;
+  --card-bg: #f4f8fa;
   --max-width: 860px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14141a;
-    --fg: #ececec;
-    --muted: #a3a3ad;
-    --accent: #d98a94;
-    --border: #2a2a33;
-    --card-bg: #1c1c24;
+    --bg: #0e161c;
+    --fg: #e8eef2;
+    --muted: #9aaab5;
+    --accent: #4fb3e3;
+    --border: #22323d;
+    --card-bg: #142029;
   }
 }
 
@@ -25,10 +38,18 @@
 
 body {
   margin: 0;
-  font-family: "Georgia", "Iowan Old Style", serif;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
   background: var(--bg);
   color: var(--fg);
   line-height: 1.6;
+}
+
+h1, h2, h3, h4,
+.site-name,
+.banner-label,
+.pub-title {
+  font-family: var(--font-title);
 }
 
 a {
@@ -40,42 +61,142 @@ a:hover {
   text-decoration: underline;
 }
 
+/* ---- Top navigation bar ---- */
 header.site-header {
-  border-bottom: 1px solid var(--border);
-  padding: 1.5rem 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--brand-navy);
+  border-bottom: 3px solid var(--brand);
+  padding: 0.85rem 1.5rem;
+  font-family: var(--font-body);
 }
 
 header.site-header .header-inner {
-  max-width: var(--max-width);
+  max-width: 1100px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
 }
 
-header.site-header h1 {
-  margin: 0 0 0.25rem;
-  font-size: 1.5rem;
+header.site-header .site-name {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
   letter-spacing: -0.01em;
 }
 
-header.site-header .tagline {
-  margin: 0 0 1rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-  font-style: italic;
-}
-
 nav.site-nav {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.3rem;
 }
 
 nav.site-nav a {
-  margin-right: 1.5rem;
-  color: var(--fg);
+  color: #c3d3de;
   font-weight: 600;
 }
 
+nav.site-nav a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 nav.site-nav a.active {
-  color: var(--accent);
+  color: #ffffff;
+  box-shadow: inset 0 -2px 0 var(--brand-bright);
+  padding-bottom: 0.2rem;
+}
+
+/* ---- Full-width photo banner ----
+   Images live in images/headers/ and are set per page in the HTML.
+   If an image is missing, the dark background shows instead. */
+.banner {
+  position: relative;
+  width: 100%;
+  height: min(320px, 45vh);
+  min-height: 240px;
+  overflow: hidden;
+  background-color: var(--brand-ink);
+  background-size: cover;
+  background-position: center;
+  font-family: var(--font-body);
+}
+
+.banner.banner-home {
+  height: min(560px, 70vh);
+  min-height: 400px;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 26, 38, 0.85) 0%,
+    rgba(6, 26, 38, 0.5) 50%,
+    rgba(6, 26, 38, 0.65) 100%
+  );
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, 100%);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.banner-label {
+  margin: 0 0 0.75rem;
+  color: var(--brand-pale);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.banner-label:empty {
+  display: none;
+}
+
+.banner h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.banner.banner-home h1 {
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  line-height: 0.95;
+}
+
+.banner-title {
+  max-width: 750px;
+  margin: 1.1rem 0 0;
+  color: #ececec;
+  font-size: clamp(1.05rem, 2.2vw, 1.6rem);
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.banner-divider {
+  width: 64px;
+  height: 4px;
+  margin-top: 1.6rem;
+  background: var(--brand-bright);
 }
 
 main {
@@ -90,7 +211,7 @@ footer.site-footer {
   padding: 1.5rem;
   color: var(--muted);
   font-size: 0.8rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   border-top: 1px solid var(--border);
 }
 
@@ -103,7 +224,7 @@ footer.site-footer {
 }
 
 .team-section h2 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-title);
   font-size: 1rem;
   color: var(--muted);
   border-bottom: 1px solid var(--border);
@@ -115,7 +236,7 @@ footer.site-footer {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
 }
 
 .team-card {
@@ -146,6 +267,138 @@ footer.site-footer {
   margin-bottom: 0.5rem;
 }
 
+/* ---- Role colours ---- */
+:root {
+  /* Built around Pantone 307: blues/teals next to it on the colour wheel,
+     plus muted warm tones (its complement) so each role is still distinct. */
+  --role-pi: #0078ae;      /* Pantone 307 */
+  --role-postdoc: #3d4ea6; /* indigo */
+  --role-phd: #6e4a9e;     /* violet */
+  --role-masters: #00806f; /* teal */
+  --role-ra: #b05a12;      /* burnt orange (complement of 307) */
+  --role-intern: #b8405e;  /* rose */
+  --role-ug: #507a22;      /* moss green */
+  --role-other: #586874;
+  --role-on: #ffffff; /* text on a solid role pill */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --role-pi: #4fb3e3;
+    --role-postdoc: #8e9cf0;
+    --role-phd: #bb9be3;
+    --role-masters: #4fcdb8;
+    --role-ra: #f0a560;
+    --role-intern: #f08ea6;
+    --role-ug: #a4d16b;
+    --role-other: #9aaab5;
+    --role-on: #0e161c;
+  }
+}
+
+.role-pi      { --c: var(--role-pi); }
+.role-postdoc { --c: var(--role-postdoc); }
+.role-phd     { --c: var(--role-phd); }
+.role-masters { --c: var(--role-masters); }
+.role-ra      { --c: var(--role-ra); }
+.role-intern  { --c: var(--role-intern); }
+.role-ug      { --c: var(--role-ug); }
+.role-other   { --c: var(--role-other); }
+
+/* Current / latest role: solid pill */
+.role-tag {
+  display: inline-block;
+  background: var(--c);
+  color: var(--role-on);
+  border: 1px solid var(--c);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  margin: 0.2rem 0 0.4rem;
+}
+
+/* Past members: their final role as an outlined pill */
+.role-tag.role-tag-past {
+  background: transparent;
+  color: var(--c);
+}
+
+.role-years {
+  font-weight: 400;
+  opacity: 0.85;
+  margin-left: 0.4rem;
+}
+
+/* Previous roles: small coloured timeline */
+.role-history {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.role-history-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.role-history ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0.3rem;
+  border-left: 2px solid var(--border);
+}
+
+.role-history li {
+  position: relative;
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding: 0.1rem 0 0.1rem 0.8rem;
+}
+
+.role-history li .role-dot {
+  position: absolute;
+  left: -0.42rem;
+  top: 0.55rem;
+}
+
+.role-history .role-years {
+  opacity: 0.75;
+}
+
+.role-dot {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow: 0 0 0 2px var(--card-bg);
+}
+
+/* Legend at top of the team page */
+.role-legend ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.role-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.role-legend .role-dot {
+  box-shadow: none;
+}
+
 .team-card p {
   font-size: 0.9rem;
   color: var(--muted);
@@ -156,7 +409,7 @@ footer.site-footer {
   display: flex;
   gap: 2rem;
   margin: 1rem 0 2rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
 }
 
 .pubs-meta .stat {
@@ -178,7 +431,7 @@ footer.site-footer {
 }
 
 .pubs-updated {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.8rem;
   color: var(--muted);
   margin-bottom: 1.5rem;
@@ -189,7 +442,7 @@ footer.site-footer {
 }
 
 .pub-year-group h2 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-title);
   font-size: 1rem;
   color: var(--muted);
   border-bottom: 1px solid var(--border);
@@ -208,20 +461,281 @@ footer.site-footer {
 
 .pub-item .pub-authors,
 .pub-item .pub-venue {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--muted);
 }
 
 .pub-item .pub-citations {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--muted);
   margin-top: 0.2rem;
 }
 
 .status-msg {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+/* ---- Long-form text (About page, blog posts) ---- */
+.prose {
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  margin: 2.2rem 0 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-top: 0.5rem;
+  background: var(--accent);
+}
+
+.prose h3 {
+  font-size: 1.2rem;
+  margin: 1.8rem 0 0.4rem;
+}
+
+.prose p,
+.prose ul,
+.prose ol {
+  margin: 0 0 1.1rem;
+}
+
+.prose li {
+  margin-bottom: 0.3rem;
+}
+
+.prose img {
+  display: block;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+}
+
+.prose blockquote {
+  margin: 1.5rem 0;
+  padding: 0.2rem 0 0.2rem 1.1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+}
+
+.prose code {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.05rem 0.3rem;
+  font-size: 0.9em;
+}
+
+.post-back {
+  margin-top: 2.5rem;
+  font-weight: 600;
+}
+
+/* ---- Blog list ---- */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.post-card {
+  display: flex;
+  gap: 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  overflow: hidden;
+  color: var(--fg);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.post-card:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 60, 90, 0.12);
+}
+
+.post-card-img {
+  width: 220px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.post-card-body {
+  padding: 1.2rem 1.4rem;
+}
+
+/* With a thumbnail, the gap already separates image and text */
+.post-card-img + .post-card-body {
+  padding-left: 0;
+}
+
+.post-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.post-card h2 {
+  font-size: 1.3rem;
+  margin: 0.3rem 0 0.4rem;
+  line-height: 1.25;
+}
+
+.post-card p {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+}
+
+.post-more {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .post-card {
+    flex-direction: column;
+    gap: 0;
+  }
+  .post-card-img {
+    width: 100%;
+    height: 180px;
+  }
+  .post-card-body,
+  .post-card-img + .post-card-body {
+    padding: 1rem 1.2rem;
+  }
+}
+
+/* ---- Gallery ---- */
+main.main-wide {
+  max-width: 1100px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.gallery-item {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: zoom-in;
+  background: var(--card-bg);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:focus-visible img {
+  transform: scale(1.04);
+}
+
+.gallery-item:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.gallery-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.6rem 0.8rem 0.6rem;
+  background: linear-gradient(transparent, rgba(6, 26, 38, 0.85));
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.gallery-item:hover .gallery-caption,
+.gallery-item:focus-visible .gallery-caption {
+  opacity: 1;
+}
+
+/* Full-size viewer */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 18, 26, 0.94);
+  padding: 1rem;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox figure {
+  margin: 0;
+  max-width: min(1200px, 100%);
+  text-align: center;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 82vh;
+  border-radius: 4px;
+}
+
+.lightbox figcaption {
+  margin-top: 0.75rem;
+  color: #e8eef2;
+  font-size: 0.95rem;
+}
+
+.lightbox button {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 0;
+  border-radius: 50%;
+  width: 2.8rem;
+  height: 2.8rem;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox button:hover {
+  background: var(--brand);
+}
+
+.lb-close { top: 1rem; right: 1rem; }
+.lb-prev  { left: 1rem; top: 50%; transform: translateY(-50%); }
+.lb-next  { right: 1rem; top: 50%; transform: translateY(-50%); }

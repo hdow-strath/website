@@ -1,42 +1,67 @@
 [
   {
     "name": "Dr Hamish Dow",
-    "role": "Principal Investigator",
-    "bio": "Short bio goes here. Edit data/team.json to add real team members.",
-    "photo": "",
+    "roles": [
+      { "title": "Principal Investigator", "type": "pi" }
+    ],
+    "bio": "Group leader and self-proclaimed mad inventor. Hamish is interested in anything that involves infrastructure and/or data.",
+    "photo": "hdow.jpg",
     "url": "https://scholar.google.com/citations?user=i2_8yp0AAAAJ&hl=en",
     "status": "current"
-  }
-
-
+  },
     {
+    "name": "Lawrence King",
+    "roles": [
+      { "title": "PhD Student", "type": "phd" }
+    ],
+    "bio": "Lawrence is researching methods for automated inspection of safety-critical infrastructure pipework.",
+    "photo": "",
+    "url": "",
+    "status": "current"
+  },
+  {
     "name": "Matthew Smith",
-    "role": "Research Assistant",
-    "bio": "Test test test.",
+    "roles": [
+      { "title": "Research Assistant", "type": "ra" },
+      { "title": "Undergraduate Student", "type": "ug" },
+      { "title": "Master's Student", "type": "masters" }
+    ],
+    "bio": "Matthew's research looks at optimisation of friction-fit modular timber construction.",
     "photo": "",
     "url": "",
     "status": "current"
-  }
-
-
-    {
+  },
+  {
     "name": "Callum Dalrymple",
-    "role": "Research Intern",
-    "bio": "Test test test.",
+    "roles": [      { "title": "Research Intern", "type": "intern" },
+      { "title": "Master's Student", "type": "masters" }
+
+    ],
+    "bio": "Callum's is researching asset management of half-joint bridges.",
     "photo": "",
     "url": "",
     "status": "current"
-  }
-
-
-    {
+  },
+  {
     "name": "Henry Seekamp",
-    "role": "Research Intern",
-    "bio": "Test test test.",
+    "roles": [
+      { "title": "Research Intern", "type": "intern" }
+    ],
+    "bio": "Henry was a visiting researcher from the University of Washington. At his time at Strathclyde in 2026 he looked at image-based assessment of confined spaces on concrete structures.",
+    "photo": "",
+    "url": "",
+    "status": "past"
+  },
+
+  {
+    "name": "Kiyali Alex Soro",
+    "roles": [
+      { "title": "Research Intern", "type": "intern" }
+    ],
+    "bio": "Alex was a visiting researcher from Le Centre des études supérieures industrielles (CESI). While at Strathclyde in 2026 he conducted research on finite element analysis of reinforced concrete half-joints.",
     "photo": "",
     "url": "",
     "status": "past"
   }
-
 
 ]

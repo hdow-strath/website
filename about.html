@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About &middot; Research Group</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-name" href="index.html" data-config="group_name">Research Group</a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="publications.html">Publications</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Header image: replace images/headers/about.jpg -->
+  <section class="banner" style="background-image: url('images/headers/about.jpg')">
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <p class="banner-label" data-config="group_name">Research Group</p>
+      <h1>About</h1>
+      <div class="banner-divider"></div>
+    </div>
+  </section>
+
+  <main>
+    <!-- Page text lives in content/about.md (Markdown) -->
+    <article class="prose" data-markdown="content/about.md">
+      <p class="status-msg">Loading...</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>Contact: <a data-config="contact_email" data-config-href="contact_mailto" href="#">email</a>
+      &middot; <a data-config-href="scholar_url" href="#" target="_blank" rel="noopener">Google Scholar</a>
+    </p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/markdown.js"></script>
+</body>
+</html>

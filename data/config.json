@@ -1,8 +1,8 @@
 {
-  "group_name": "Research Group",
-  "tagline": "Edit this tagline in data/config.json",
-  "institution": "",
-  "about": "Write a short paragraph about your research group's focus here. Edit data/config.json to change this text.",
+  "group_name": "Digital Infrastructure Group",
+  "tagline": "Sensing, automation and intelligence for the built environment",
+  "institution": "Department of Civil and Environmental Engineering, University of Strathclyde",
+  "about": "The Digital Infrastructure Group develops sensing, automation and data-driven methods for understanding and managing civil infrastructure. Our research spans robotics, computer vision, structural health monitoring and digital modelling, with the aim of making the assessment of bridges, tunnels, buildings and other built assets safer, faster and more reliable. Working with industry and asset owners, we turn inspection and monitoring data into practical tools that support better decisions across the whole life of a structure.",
   "scholar_id": "i2_8yp0AAAAJ",
   "scholar_url": "https://scholar.google.com/citations?user=i2_8yp0AAAAJ&hl=en",
   "contact_email": "hamish.dow@strath.ac.uk",
